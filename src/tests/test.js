@@ -3,13 +3,18 @@ require('dotenv').config();
 
 const { List, Card } = require('../models');
 
+
 const test = async () => {
-  const list = await List.findAll();
-  console.log(list);
+  const lists = await List.findAll({ include: 'cards'});
 
-  console.log(await Card.findOne());
+  for(let list of lists) {
+    console.log(list.name);
+    console.log(list.cards.length);
+  }
+
+  console.log((await Card.findByPk(3,{
+    include: 'tags'
+  })).tags[0].name);
 }
-
-
 
 test();
