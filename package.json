@@ -1,0 +1,19 @@
+{
+  "name": "o_kanban",
+  "version": "1.0.0",
+  "description": "cp 5, cp6, cp7",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^8.11.3",
+    "sequelize": "^6.33.0"
+  }
+}
